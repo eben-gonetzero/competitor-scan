@@ -54,7 +54,7 @@ node index.mjs loopbacksystems.com
 node index.mjs loopbacksystems.com
 ```
 
-The tool will analyze Loopback's positioning, suggest two direct competitors (likely something like Camus Energy and Sense / Bidgely / similar grid-software peers), prompt you to confirm or replace them, then pull ads on each. The final synthesis tells you what messaging space is open for Loopback to claim.
+The tool will analyze Loopback's positioning, suggest two direct competitors, prompt you to confirm or replace them, then pull ads on each. The final synthesis tells you what messaging space is open for Loopback to claim.
 
 ## Confirmation step
 
