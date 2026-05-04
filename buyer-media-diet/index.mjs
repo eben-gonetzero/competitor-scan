@@ -61,11 +61,14 @@ ${c.amber}━━━━━━━━━━━━━━━━━━━━━━━�
 // CORE: CLAUDE API CALL WITH WEB SEARCH
 // ────────────────────────────────────────────────────────────────────
 async function callClaude({ system, prompt, maxSearches = 8 }) {
+  const tools = maxSearches > 0
+    ? [{ type: "web_search_20250305", name: "web_search", max_uses: maxSearches }]
+    : [];
   const response = await client.messages.create({
     model: MODEL,
     max_tokens: 8000,
     system,
-    tools: [{ type: "web_search_20250305", name: "web_search", max_uses: maxSearches }],
+    ...(tools.length > 0 && { tools }),
     messages: [{ role: "user", content: prompt }],
   });
 
